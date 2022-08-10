@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="icon" href="./favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-------------------------- nav -------------------------->
+    <div class="nav">
+        <div class="navWelcome">Welcome</div>
+        <div class="navBox">
+            <div class="navContinue">Continue as -</div>
+            <div class="nav-menu">
+                <div id="order" onclick="orderView()">Customer</div>
+                <div id="recieve" onclick="recieveView()">Personnel</div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------- order -------------------------->
+    <div class="order" id="orderpage">
+        <div class="cusDetlOrd"></div>
+        <div class="orderHead">
+            <div class="placeOrder">Add items here</div>
+            <form action="#" id="form">
+                <input type="text" class="addOrder"></input>
+                <button type="submit" class="submitOrder">Add item</button>
+            </form>
+        </div>
+        <div class="yourOrders">
+            <div class="yourOrdersHead">Your Orders</div>
+        </div>
+        <div class="orderConfButton" onclick="ordFinal()">place order</div>
+    </div>
+    <!------------------------login page---------------------------->
+    <div class="loginPage">
+        <form class="loginBox">
+            <div class="loginHead">
+                Login Here
+            </div>
+            <div class="formDiv">
+                <input type="text" class="formInput" id="username">
+                <label for="username" class="formLabel">username</label>
+            </div>
+            <div class="formDiv">
+                <input type="text" class="formInput" id="password">
+                <label for="password" class="formLabel">password</label>
+            </div>
+            <input type="submit" class="formButton" value="login">
+        </form>
+    </div>
+    <!-------------------------- recieve -------------------------->
+    <div class="recieve" id="recievepage">
+        <div class="recieveHead">Orders</div>
+    </div>
+    <!----------------------------customer login------------------->
+    <div class="custLoginPage">
+        <form class="custLloginBox">
+            <div class="custLoginHead">
+                Login Here
+            </div>
+            <div class="formDiv">
+                <input type="text" class="custFormInput" id="custName">
+                <label for="custName" class="custFormLabel">Enter Your Name</label>
+            </div>
+            <input type="submit" class="custFormButton" value="login">
+        </form>
+    </div>
+</body>
+
+</html>
